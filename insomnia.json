@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2018-06-19T10:43:46.641Z",
+	"__export_date": "2018-06-19T10:48:24.773Z",
 	"__export_source": "insomnia.desktop.app:v5.16.6",
 	"resources": [
 		{
@@ -17,9 +17,11 @@
 			"_id": "env_da1fe1b96baa405a9e7b095b5b6e7366",
 			"color": null,
 			"created": 1529389841830,
-			"data": {},
+			"data": {
+				"key": ""
+			},
 			"isPrivate": false,
-			"modified": 1529389841830,
+			"modified": 1529405288176,
 			"name": "New Environment",
 			"parentId": "wrk_91ae4ee737a84419ad7f6e562c6c5898",
 			"_type": "environment"
@@ -79,6 +81,54 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "http://localhost:3000/cronjob",
+			"_type": "request"
+		},
+		{
+			"_id": "req_7de93c50ecb749528fe98abecb1f0e19",
+			"authentication": {},
+			"body": {},
+			"created": 1529405031016,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1529405031016,
+			"method": "GET",
+			"modified": 1529405205103,
+			"name": "getVideo",
+			"parameters": [
+				{
+					"id": "pair_c381dd90e181447d8e01b7e361fdab9e",
+					"name": "key",
+					"value": "{{ key  }}"
+				},
+				{
+					"id": "pair_1650575de76544bfac419ff9162a50f8",
+					"name": "maxResults",
+					"value": "10"
+				},
+				{
+					"id": "pair_a88b19f6d3f5425baaf07a15d2745cde",
+					"name": "regionCode",
+					"value": "TW"
+				},
+				{
+					"id": "pair_45e175669bc148e086c32f8735d4454c",
+					"name": "chart",
+					"value": "mostPopular"
+				},
+				{
+					"id": "pair_ff7313e8831543c49ab496875ae2fe0a",
+					"name": "part",
+					"value": "snippet"
+				}
+			],
+			"parentId": "wrk_91ae4ee737a84419ad7f6e562c6c5898",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://www.googleapis.com/youtube/v3/videos",
 			"_type": "request"
 		}
 	]

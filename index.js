@@ -5,29 +5,32 @@ const app = express()
 const jobCreator = require('./job-creator.js')
 
 app.get('/', function(req, res) {
-  res.send('Hello World!')
+	res.send('Hello World!')
 })
 
-function fetchLatestVideos() {
-    console.log('fetchLatestVideo '+Date.now())
-}
+const fetchLatestVideos = require('./fetch.js')
 
-const hourlyJob = jobCreator({onTick:fetchLatestVideos})
+const hourlyJob = jobCreator({
+	onTick: async () => {
+		const list = await fetchLatestVideos()
+		console.log(list)
+	}
+})
 
 // cron job health
 app.get('/cronjob', function(req, res) {
-    res.json({
-        running: hourlyJob.running,
-        lastDate: hourlyJob.lastDate(),
-        nextDates: hourlyJob.nextDates()
-    })
+	res.json({
+		running: hourlyJob.running,
+		lastDate: hourlyJob.lastDate(),
+		nextDates: hourlyJob.nextDates()
+	})
 })
 
-const server = app.listen(3000, function() {
-  const host = server.address().address
-  const port = server.address().port
+const server = app.listen(3000, async function() {
+	const host = server.address().address
+	const port = server.address().port
 
-  hourlyJob.start()
+	hourlyJob.start()
 
-  console.log(`Example app listening at 'http://${host}:${port}'`)
+	console.log(`App listening at 'http://${host}:${port}'`)
 })
