@@ -17,7 +17,9 @@ const hourlyJob = jobCreator({onTick:fetchLatestVideos})
 // cron job health
 app.get('/cronjob', function(req, res) {
     res.json({
-        running: hourlyJob.running
+        running: hourlyJob.running,
+        lastDate: hourlyJob.lastDate(),
+        nextDates: hourlyJob.nextDates()
     })
 })
 
