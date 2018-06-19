@@ -1,0 +1,85 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-06-19T10:43:46.641Z",
+	"__export_source": "insomnia.desktop.app:v5.16.6",
+	"resources": [
+		{
+			"_id": "wrk_91ae4ee737a84419ad7f6e562c6c5898",
+			"created": 1529389841671,
+			"description": "",
+			"modified": 1529389841671,
+			"name": "my",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_da1fe1b96baa405a9e7b095b5b6e7366",
+			"color": null,
+			"created": 1529389841830,
+			"data": {},
+			"isPrivate": false,
+			"modified": 1529389841830,
+			"name": "New Environment",
+			"parentId": "wrk_91ae4ee737a84419ad7f6e562c6c5898",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_6679f5d1066a45f383a089e08f8213e8",
+			"cookies": [],
+			"created": 1529389841846,
+			"modified": 1529389841846,
+			"name": "Default Jar",
+			"parentId": "wrk_91ae4ee737a84419ad7f6e562c6c5898",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_252f8aa9d7f3477abafbc9471f8ea507",
+			"authentication": {},
+			"body": {},
+			"created": 1529404322503,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1529166183237.5,
+			"method": "GET",
+			"modified": 1529404347272,
+			"name": "local cronjob status",
+			"parameters": [
+				{
+					"id": "pair_3fe55eb6a22040439ea087f92f35c840",
+					"name": "part",
+					"value": "snippet"
+				},
+				{
+					"id": "pair_e1afd9c2f2e14efd8c29d39c6bad7c2a",
+					"name": "chart",
+					"value": "mostPopular"
+				},
+				{
+					"id": "pair_fe4baacc63844ab0a14de167cd8bfd97",
+					"name": "regionCode",
+					"value": "TW"
+				},
+				{
+					"id": "pair_e04a372a0dbe4a7eb1a66ddf232067e1",
+					"name": "maxResults",
+					"value": "10"
+				},
+				{
+					"id": "pair_ec4dfb8e4f0b46b19f9d36e630981aaf",
+					"name": "key",
+					"value": "AIzaSyBvHQE9euRgPEQvRJl6Xydp_ZFu-n6KZEs"
+				}
+			],
+			"parentId": "wrk_91ae4ee737a84419ad7f6e562c6c5898",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:3000/cronjob",
+			"_type": "request"
+		}
+	]
+}
