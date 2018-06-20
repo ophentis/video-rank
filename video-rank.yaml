@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: video-rank-pod
+  labels:
+    app: webserver
+spec:
+  containers:
+  - name: video-rank-container
+    image: ophentis/video-rank
+    ports:
+    - containerPort: 3000
+  imagePullSecrets:
+  - name: regcred
